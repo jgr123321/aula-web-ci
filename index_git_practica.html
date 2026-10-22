@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica Git - Versión Inicial</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #1e293b; background: #f1f5f9; }
+    /* CAMBIO 2: cambia el color de fondo del encabezado de azul a verde (#15803d). */
+    header { background: #174ea6; color: white; padding: 38px 20px; text-align: center; }
+    header h1 { margin: 0 0 12px; }
+    header p { margin: 0; }
+    /* CAMBIO 3: cambia el color de la barra de navegación a #14532d. */
+    nav { background: #0f172a; padding: 14px; text-align: center; }
+    nav a { color: white; text-decoration: none; font-weight: bold; margin: 0 14px; }
+    main { max-width: 1050px; margin: 28px auto; padding: 0 20px; }
+    section { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px #00000012; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+    .card { background: #eaf2ff; border: 1px solid #c8daff; border-radius: 8px; padding: 18px; }
+    .card h3 { margin-top: 0; }
+    /* CAMBIO 6: cambia el color de este botón a #15803d. */
+    button { background: #174ea6; color: white; padding: 12px 20px; border: 0; border-radius: 7px; cursor: pointer; }
+    button:hover { opacity: 0.9; }
+    #resultado { font-weight: bold; }
+    footer { text-align: center; padding: 20px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- CAMBIO 1: sustituye el texto del h1 por "Laboratorio de Git y GitHub". -->
+    <h1>Práctica Git - Versión Inicial</h1>
+    <p>Curso de Automatización de Despliegue de Aplicaciones</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#modulos">Módulos</a>
+    <a href="#prueba">Prueba</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido al laboratorio Git</h2>
+      <p>Usaremos esta web para aprender ramas, commits y fusiones sin conflictos.</p>
+      <!-- CAMBIO 5: añade debajo otro párrafo con el texto "Esta web está versionada con Git". -->
+    </section>
+
+    <section id="modulos">
+      <h2>Módulos del curso</h2>
+      <div class="cards">
+        <div class="card"><h3>Git</h3><p>Control de versiones.</p></div>
+        <div class="card"><h3>GitHub</h3><p>Repositorios remotos.</p></div>
+        <div class="card"><h3>GitHub Actions</h3><p>Integración continua.</p></div>
+        <!-- CAMBIO 4: añade AQUÍ otra tarjeta .card con título "Docker" y texto "Contenedores y despliegue web". -->
+      </div>
+    </section>
+
+    <section id="prueba">
+      <h2>Prueba interactiva</h2>
+      <p>Pulsa el botón para comprobar que el JavaScript funciona.</p>
+      <!-- CAMBIO 6: cambia el texto del botón por "Comprobar práctica". -->
+      <button type="button" onclick="mostrarMensaje()">Probar aplicación</button>
+      <p id="resultado" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>Práctica Git · Versión 1.0</footer>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('resultado').textContent = 'La aplicación funciona correctamente.';
+    }
+  </script>
+</body>
+</html>
