@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cambios para práctica Git</title><style>body{margin:0;background:#f1f5f9;font-family:Arial,sans-serif;color:#1e293b}header{background:#174ea6;color:white;padding:28px 22px}main{max-width:1050px;margin:25px auto;padding:0 16px}.step{background:white;border-radius:12px;padding:22px;margin-bottom:18px;box-shadow:0 2px 8px #0001}pre{background:#0f172a;color:#e2e8f0;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;border-radius:8px}button{border:0;background:#174ea6;color:white;padding:10px 14px;border-radius:8px;cursor:pointer}small{color:#64748b}code{background:#e2e8f0;padding:3px}h2{margin-top:0}</style></head><body><header><h1>Ejercicios Git: copiar y pegar</h1><p>Abre index_git_practica.html en VS Code. Haz cada cambio en orden, sin conflictos.</p></header><main><section class="step"><h2>Preparación</h2><p>Copia <b>index_git_practica.html</b> a <code>C:\CursoDocker\web</code>, ejecuta los siguientes comandos si este archivo aún no está en Git:</p><pre>cd C:\CursoDocker\web
+git switch main
+git add index_git_practica.html
+git commit -m "Añadir HTML inicial para practicar"</pre><small>Si ya está añadido y confirmado, omite el add y commit iniciales.</small></section>
+<section class="step"><h2>1. Cambiar título</h2><p><b>Buscar en el original:</b></p><pre>&lt;h1&gt;Práctica Git - Versión Inicial&lt;/h1&gt;</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet1">&lt;h1&gt;Laboratorio de Git y GitHub&lt;/h1&gt;</pre><button onclick="copiar('snippet1',this)">Copiar cambio 1</button><p><b>Comandos Git:</b></p><pre id="cmd1">git switch main
+git switch -c cambio-1-titulo
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 1: Cambiar título&quot;
+git switch main
+git merge cambio-1-titulo</pre><button onclick="copiar('cmd1',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>2. Cambiar color de cabecera</h2><p><b>Buscar en el original:</b></p><pre>header { background: #174ea6; color: white; padding: 38px 20px; text-align: center; }</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet2">header { background: #15803d; color: white; padding: 38px 20px; text-align: center; }</pre><button onclick="copiar('snippet2',this)">Copiar cambio 2</button><p><b>Comandos Git:</b></p><pre id="cmd2">git switch main
+git switch -c cambio-2-cabecera
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 2: Cambiar color de cabecera&quot;
+git switch main
+git merge cambio-2-cabecera</pre><button onclick="copiar('cmd2',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>3. Cambiar color del menú</h2><p><b>Buscar en el original:</b></p><pre>nav { background: #0f172a; padding: 14px; text-align: center; }</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet3">nav { background: #14532d; padding: 14px; text-align: center; }</pre><button onclick="copiar('snippet3',this)">Copiar cambio 3</button><p><b>Comandos Git:</b></p><pre id="cmd3">git switch main
+git switch -c cambio-3-menu
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 3: Cambiar color del menú&quot;
+git switch main
+git merge cambio-3-menu</pre><button onclick="copiar('cmd3',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>4. Añadir tarjeta Docker</h2><p><b>Buscar en el original:</b></p><pre>&lt;!-- CAMBIO 4: añade AQUÍ otra tarjeta .card con título &quot;Docker&quot; y texto &quot;Contenedores y despliegue web&quot;. --&gt;</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet4">&lt;div class=&quot;card&quot;&gt;&lt;h3&gt;Docker&lt;/h3&gt;&lt;p&gt;Contenedores y despliegue web.&lt;/p&gt;&lt;/div&gt;</pre><button onclick="copiar('snippet4',this)">Copiar cambio 4</button><p><b>Comandos Git:</b></p><pre id="cmd4">git switch main
+git switch -c cambio-4-docker
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 4: Añadir tarjeta Docker&quot;
+git switch main
+git merge cambio-4-docker</pre><button onclick="copiar('cmd4',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>5. Añadir un párrafo</h2><p><b>Buscar en el original:</b></p><pre>&lt;!-- CAMBIO 5: añade debajo otro párrafo con el texto &quot;Esta web está versionada con Git&quot;. --&gt;</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet5">&lt;p&gt;Esta web está versionada con Git.&lt;/p&gt;</pre><button onclick="copiar('snippet5',this)">Copiar cambio 5</button><p><b>Comandos Git:</b></p><pre id="cmd5">git switch main
+git switch -c cambio-5-parrafo
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 5: Añadir un párrafo&quot;
+git switch main
+git merge cambio-5-parrafo</pre><button onclick="copiar('cmd5',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>6. Cambiar el botón</h2><p><b>Buscar en el original:</b></p><pre>&lt;button type=&quot;button&quot; onclick=&quot;mostrarMensaje()&quot;&gt;Probar aplicación&lt;/button&gt;</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet6">&lt;button type=&quot;button&quot; onclick=&quot;mostrarMensaje()&quot;&gt;Comprobar práctica&lt;/button&gt;</pre><button onclick="copiar('snippet6',this)">Copiar cambio 6</button><p><b>Comandos Git:</b></p><pre id="cmd6">git switch main
+git switch -c cambio-6-boton
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 6: Cambiar el botón&quot;
+git switch main
+git merge cambio-6-boton</pre><button onclick="copiar('cmd6',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>7. Cambiar color del botón</h2><p><b>Buscar en el original:</b></p><pre>button { background: #174ea6; color: white; padding: 12px 20px; border: 0; border-radius: 7px; cursor: pointer; }</pre><p><b>Sustituir por (copiar y pegar):</b></p><pre id="snippet7">button { background: #15803d; color: white; padding: 12px 20px; border: 0; border-radius: 7px; cursor: pointer; }</pre><button onclick="copiar('snippet7',this)">Copiar cambio 7</button><p><b>Comandos Git:</b></p><pre id="cmd7">git switch main
+git switch -c cambio-7-color-boton
+# Edita y guarda el archivo usando el fragmento anterior
+git diff
+git add index_git_practica.html
+git commit -m &quot;Ejercicio 7: Cambiar color del botón&quot;
+git switch main
+git merge cambio-7-color-boton</pre><button onclick="copiar('cmd7',this)">Copiar comandos Git</button></section>
+<section class="step"><h2>Finalizar</h2><pre>git push origin main
+git status
+git log --oneline --graph --all -8</pre><p>Las fusiones se realizan de una en una después de guardar cada cambio, sin conflictos intencionados. No es necesario modificar Dockerfile ni el workflow.</p></section></main><script>function copiar(id,b){navigator.clipboard.writeText(document.getElementById(id).textContent).then(()=>{const old=b.textContent;b.textContent="¡Copiado!";setTimeout(()=>b.textContent=old,1200)});}</script></body></html>
